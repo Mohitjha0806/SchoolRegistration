@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SchoolRegistration.Bal\SchoolRegistration.Bal.csproj" />
+    <ProjectReference Include="..\SchoolRegistration.Data\SchoolRegistration.Data.csproj" />
+    <ProjectReference Include="..\SchoolRegistration.Entities\SchoolRegistration.Entities.csproj" />
+    <ProjectReference Include="..\SchoolRegistration.infrastrcuture\SchoolRegistration.infrastrcuture.csproj" />
+    <ProjectReference Include="..\SchoolRegistration.Services\SchoolRegistration.Services.csproj" />
+  </ItemGroup>
+
+</Project>
