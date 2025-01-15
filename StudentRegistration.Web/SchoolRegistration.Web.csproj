@@ -7,11 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SchoolRegistration.Bal\SchoolRegistration.Bal.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SchoolRegistration.Data\SchoolRegistration.Data.csproj" />
-    <ProjectReference Include="..\SchoolRegistration.Entities\SchoolRegistration.Entities.csproj" />
-    <ProjectReference Include="..\SchoolRegistration.infrastrcuture\SchoolRegistration.infrastrcuture.csproj" />
-    <ProjectReference Include="..\SchoolRegistration.Services\SchoolRegistration.Services.csproj" />
   </ItemGroup>
 
 </Project>
