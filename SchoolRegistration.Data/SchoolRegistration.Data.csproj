@@ -15,4 +15,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SchoolRegistration.Entities\SchoolRegistration.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

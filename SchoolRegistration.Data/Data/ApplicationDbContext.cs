@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SchoolRegistration.Entities.Models; // Ensure the namespace is included
+using SchoolRegistration.Entities.Model;
 
 namespace SchoolRegistration.Data.Data
 {
@@ -14,20 +14,20 @@ namespace SchoolRegistration.Data.Data
         {
         }
 
-        // DbSet for SchoolBasicInformation
         public DbSet<SchoolBasicInformation> SchoolBasicInformation { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=DESKTOP-OKN4EUA\\SQLEXPRESS; Database=StudentRegistration_Db; Integrated Security=True; TrustServerCertificate=True;");
+                optionsBuilder.UseSqlServer("Server=DESKTOP-OKN4EUA\\SQLEXPRESS; Database=StudentRegistration_Db; Integrated Security=True; TrustServerCertificate=True; " +
+                    "trusted_Connection=true;");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder); // Ensure base implementation is called
+            base.OnModelCreating(modelBuilder); 
             OnModelCreatingPartial(modelBuilder);
         }
 

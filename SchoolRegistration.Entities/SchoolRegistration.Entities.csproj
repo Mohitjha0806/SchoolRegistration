@@ -19,8 +19,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\SchoolRegistration.Data\SchoolRegistration.Data.csproj" />
-  </ItemGroup>
-
 </Project>
