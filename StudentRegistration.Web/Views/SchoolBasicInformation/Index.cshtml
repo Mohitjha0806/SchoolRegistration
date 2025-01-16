@@ -1,0 +1,80 @@
+﻿@{
+	ViewData["Title"] = "School Basic Inforamtion";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="card mb-5">
+	<div class="card-header">
+		<div class="row page-titles mx-0">
+			<div class="col-sm-6 p-md-0">
+				<div class="welcome-text">
+					<h4>School Basic Inforamtion</h4>
+				</div>
+			</div>
+			<div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">Civil Construction</a></li>
+					<li class="breadcrumb-item active"><a href="#">School Basic Inforamtion</a></li>
+				</ol>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="card">
+	<div class="card-header">
+		<div class="row px-2">
+			<div class="col-md-6">
+				<h4 class="card-title">
+					School Basic Inforamtion List
+				</h4>
+			</div>
+			<div class="col-md-6 text-end">
+				<a asp-action="Create" asp-controller="SchoolBasicInformation" class="btn btn-primary shadow sharp me-1">
+					Add School Basic Information
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="card-body">
+
+		<div class="row mb-3 px-3">
+			<h4>
+				आपके द्वारा प्रेषित नवीन/ मरम्मत कार्य कि सूची
+			</h4>
+		</div>
+
+
+		<div class="table-responsive">
+			<table class="dataTable display responsive nowrap w-100">
+				<thead>
+					<tr>
+						<th class="text-center">No.</th>
+						<th class="text-center">UDISE Code</th>
+						<th class="text-center">Name In English</th>
+						<th class="text-center">Name in Hindi</th>
+						<th class="text-center">Year Of Establishment</th>
+						<th class="text-center">Recognition</th>
+						<th class="text-center">Select Board </th>
+						<th class="text-center">Status</th>
+						<th class="text-center">Action</th>
+					</tr>
+				</thead>
+
+
+
+
+			</table>
+
+
+		</div>
+	</div>
+</div>
+
+
