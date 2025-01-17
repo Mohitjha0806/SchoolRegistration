@@ -15,4 +15,11 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SchoolRegistration.Data\SchoolRegistration.Data.csproj" />
+    <ProjectReference Include="..\SchoolRegistration.Entities\SchoolRegistration.Entities.csproj" />
+    <ProjectReference Include="..\SchoolRegistration.infrastrcuture\SchoolRegistration.infrastrcuture.csproj" />
+    <ProjectReference Include="..\SchoolRegistration.Services\SchoolRegistration.Services.csproj" />
+  </ItemGroup>
+
 </Project>

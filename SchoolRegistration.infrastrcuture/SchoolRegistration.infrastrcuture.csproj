@@ -20,4 +20,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SchoolRegistration.Data\SchoolRegistration.Data.csproj" />
+    <ProjectReference Include="..\SchoolRegistration.Entities\SchoolRegistration.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

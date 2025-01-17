@@ -1,18 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SchoolRegistration.Entities.Model;
 
+
+
+
+
 namespace SchoolRegistration.Web.Controllers.SchoolBasicInformation
 {
     public class SchoolBasicInformationController : Controller
     {
-
-      
-
-
         public IActionResult Index()
         {
             return View();
         }
+
+
         public IActionResult Create()
         {
             return View();
@@ -20,7 +22,7 @@ namespace SchoolRegistration.Web.Controllers.SchoolBasicInformation
 
 
         [HttpPost]
-        public IActionResult Create(SchoolBasicInformation schoolbasicInformation)
+        public IActionResult Create(SchoolBasicInformations schoolbasicInformation)
         {
             return View();
         }

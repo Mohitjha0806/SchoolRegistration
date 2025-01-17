@@ -14,7 +14,7 @@ namespace SchoolRegistration.Data.Data
         {
         }
 
-        public DbSet<SchoolBasicInformation> SchoolBasicInformation { get; set; }
+        public DbSet<SchoolBasicInformations> SchoolBasicInformationss { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

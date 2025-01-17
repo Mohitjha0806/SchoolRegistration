@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
 
 
 namespace SchoolRegistration.Entities.Model
 {
-    public class SchoolBasicInformation
+    public class SchoolBasicInformations
     {
         [Key]
         public int Id { get; set; }
