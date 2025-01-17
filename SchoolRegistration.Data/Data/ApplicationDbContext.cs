@@ -14,14 +14,14 @@ namespace SchoolRegistration.Data.Data
         {
         }
 
-        public DbSet<SchoolBasicInformations> SchoolBasicInformationss { get; set; }
+        //public DbSet<SchoolBasicInformations> SchoolBasicInformations { get; set; }
+        public DbSet<SchoolBasicInformationStudent> SchoolBasicInformationStudents { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=DESKTOP-OKN4EUA\\SQLEXPRESS; Database=StudentRegistration_Db; Integrated Security=True; TrustServerCertificate=True; " +
-                    "trusted_Connection=true;");
+                optionsBuilder.UseSqlServer("Server=DESKTOP-OKN4EUA\\SQLEXPRESS;Database=StudentRegistration_Db;Integrated Security=True;TrustServerCertificate=True;");
             }
         }
 

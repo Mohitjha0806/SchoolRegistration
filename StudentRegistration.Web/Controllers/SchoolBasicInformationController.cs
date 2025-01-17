@@ -2,14 +2,13 @@
 using SchoolRegistration.Data.Data;
 using SchoolRegistration.Entities.Model;
 
-
-namespace SchoolRegistration.Web.Controllers
+namespace SchoolRegistration.Web.Controllers.SchoolBasicInformation
 {
-    public class SchoolBasicInformationControllers : Controller
+    public class SchoolBasicInformationController : Controller
     {
         private readonly ApplicationDbContext dbContext;
 
-        public SchoolBasicInformationControllers(ApplicationDbContext dbContext)
+        public SchoolBasicInformationController(ApplicationDbContext dbContext)
         {
             this.dbContext = dbContext;
         }
@@ -21,19 +20,35 @@ namespace SchoolRegistration.Web.Controllers
         }
 
 
+        [HttpGet]
         public IActionResult Create()
         {
+
             return View();
-        }
-        [HttpPost]
-        public Task<IActionResult> Create(SchoolBasicInformations schoolBasicInformation)
-        {
-            return Task.FromResult<IActionResult>(View());
         }
 
-        public IActionResult Edit()
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(SchoolBasicInformationStudent schoolbasicInformationStudent)
         {
-            return View();
+
+            dbContext.SchoolBasicInformationStudents.Add(schoolbasicInformationStudent);
+            try
+            {
+                dbContext.SaveChanges();
+                ViewBag.Success = "Data inserted";
+                return View();
+            }
+            catch
+            {
+                ViewBag.Error = "Something Wrong";
+                
+                return View();
+            }
+
+           
         }
+
     }
 }

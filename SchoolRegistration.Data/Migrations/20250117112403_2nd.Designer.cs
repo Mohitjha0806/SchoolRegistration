@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SchoolRegistration.Data.Data;
 
@@ -11,9 +12,11 @@ using SchoolRegistration.Data.Data;
 namespace SchoolRegistration.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250117112403_2nd")]
+    partial class _2nd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,7 +25,7 @@ namespace SchoolRegistration.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("SchoolRegistration.Entities.Model.SchoolBasicInformationStudent", b =>
+            modelBuilder.Entity("SchoolRegistration.Entities.Model.SchoolBasicInformations", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -37,25 +40,21 @@ namespace SchoolRegistration.Data.Migrations
                         .HasColumnType("date");
 
                     b.Property<string>("SchoolBoard")
-                        .IsRequired()
                         .HasMaxLength(30)
                         .IsUnicode(false)
                         .HasColumnType("varchar(30)");
 
                     b.Property<string>("SchoolNameEnglish")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .IsUnicode(false)
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("SchoolNameHindi")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .IsUnicode(true)
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("UDISECode")
-                        .IsRequired()
                         .HasMaxLength(11)
                         .HasColumnType("nvarchar(11)");
 
@@ -64,7 +63,7 @@ namespace SchoolRegistration.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SchoolBasicInformationStudents");
+                    b.ToTable("SchoolBasicInformations");
                 });
 #pragma warning restore 612, 618
         }
